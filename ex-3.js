@@ -373,5 +373,13 @@ const bills = [
   },
 ];
 
-// Start coding here
-const billMembers;
+// console.log(bills[0].member.name);
+
+function findNameMember (x) {
+return x.filter(finder => finder.member !== null)
+        .map(pullMember => pullMember.member.name)
+}
+
+let onlyMember = findNameMember(bills);
+console.log(onlyMember)
+

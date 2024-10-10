@@ -373,5 +373,15 @@ const bills = [
   },
 ];
 
-// Start coding here
-const totalMembers;
+
+function findNameMember(x) {
+  const uniqueNames = x
+    .filter(finder => finder.member !== null) // กรองเฉพาะที่มี member ไม่เป็น null
+    .map(pullMember => pullMember.member.name) // ดึงชื่อของ member
+    .filter((name, index, self) => self.indexOf(name) === index); // กรองชื่อซ้ำออก
+
+  return `Unique Members Count: ${uniqueNames.length}`;
+}
+
+let result = findNameMember(bills);
+console.log(result);
