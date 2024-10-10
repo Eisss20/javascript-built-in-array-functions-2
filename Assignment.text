@@ -1,0 +1,130 @@
+Exercise #1 :
+
+กำหนดให้ bills เก็บรายการสั่งซื้อสินค้าเป็น Array ที่มี Value เป็น Object ของแต่ละรายการสั่งซื้อ
+ซึ่งแต่ละ Object จะประกอบไปด้วย Property ดังนี้
+id คือ Property ที่มี Value เป็นรหัสประจำรายการสั่งซื้อชุดนั้น
+transactionDate คือ Property ที่มี Value เป็น String ที่เก็บข้อมูลวันที่ที่มีการชำระเงิน
+total คือ Property ที่มี Value เป็น Number ที่เก็บข้อมูลยอดชำระทั้งหมด
+location คือ Property ที่มี Value เป็น String ที่เก็บข้อมูลสถานที่ที่มีการชำระเงิน
+paymentType คือ Property ที่มี Value เป็น String ที่เก็บข้อมูลวิธีการชำระเงิน
+member คือ Property ที่มี Value เป็น Object ที่เก็บข้อมูลสมาชิก
+ตัวอย่างข้อมูลบิลของร้านค้า
+
+Copy
+const bills = [
+  {
+    id: "1",
+    transactionDate: "2021-08-01",
+    total: 20000,
+    location: "Chonburi",
+    paymentType: "Cash",
+    member: {
+      name: "Mark",
+      age: "26",
+    },
+    pointRate: 0.01,
+  },
+  // ...
+  {
+    id: "36",
+    transactionDate: "2021-08-25",
+    total: 74321,
+    location: "Nakhon Sawan",
+    paymentType: "QR",
+    member: {
+      name: "Mark",
+      age: 26,
+    },
+    pointRate: 0.01,
+  },
+];
+ให้หายอดชำระรวมทั้งหมดใน bills โดยใช้ Built-in Array Function
+เมื่อโปรแกรมทำงานสำเร็จ ควรจะแสดงผลลัพธ์ทางหน้าจอแบบนี้
+
+Copy
+"Total bill transaction is 1410083";
+Exercise #2 :
+
+จากข้อก่อนหน้านี้ จะสังเกตเห็นว่ารายการสั่งซื้อสินค้าบางรายการ จะไม่มีรายละเอียดสมาชิกเก็บไว้ ( มี Value เป็นnull )
+ให้เขียนโปรแกรมที่เลือกเฉพาะรายการสั่งซื้อสินค้าที่มีข้อมูลสมาชิกเท่านั้น โดยใช้ Built-in Array Function
+
+เมื่อโปรแกรมทำงานสำเร็จ ควรจะแสดงผลลัพธ์ทางหน้าจอแบบนี้
+
+Copy
+Exercise #3 :
+
+จากข้อก่อนหน้านี้ ต่อมาเราต้องการเห็นเฉพาะชื่อสมาชิกจากรายการสั่งซื้อสินค้าทั้งหมด
+ให้เขียนโปรแกรมที่สามารถแสดงผลชื่อสมาชิกจากรายการสั่งซื้อสินค้าทั้งหมด โดยใช้ Built-in Array Function
+
+เมื่อโปรแกรมทำงานสำเร็จ ควรจะแสดงผลลัพธ์ทางหน้าจอแบบนี้
+
+Copy
+Exercise #4 :
+
+จากข้อก่อนหน้า จะสังเกตเห็นว่าชื่อของสมาชิกจากรายการสั่งซื้อ มีชื่อที่ซํ้ากันอยู่
+ให้เขียนโปรแกรมที่สามารถนับจำนวนสมาชิกทั้งหมด โดยจะไม่นับชื่อที่ซ้ำกัน โดยใช้ Built-in Array Function
+เมื่อโปรแกรมทำงานสำเร็จ ควรจะแสดงผลลัพธ์ทางหน้าจอแบบนี้
+
+Copy
+"Unique Members Count: 12";
+Exercise #5 :
+
+สมมุติว่าเรามี Array ชื่อcrimeRecordNames เป็น Array ที่บรรจุชื่อบุคคลที่มีประวัติอาชญากรรม
+ให้เขียน Function ที่ชื่อว่า searchCrimeRecord ซึ่งมีคุณสมบัติต่อไปนี้
+รับ Parameter ชื่อ name ซึ่งเป็น String
+ถ้าชื่อคนที่เข้าเมือง มีประวัติอาชญากรรม โปรแกรมควรจะแสดงผลลัพธ์ออกมาทางหน้าจอว่าเป็นข้อความว่า “<ชื่อ> has a crime record!!!”
+ถ้าชื่อคนที่เข้าเมือง ไม่มีประวัติอาชญากรรม โปรแกรมควรจะแสดงผลลัพธ์ออกมาทางหน้าจอว่าเป็นข้อความว่า “<ชื่อ> has no crime record.”
+Exercise #6 :
+
+สมมุติว่าเรามี Array ชื่อcarCollection เป็น Array ที่มี Value เป็น String ที่เก็บข้อมูลยี่ห้อของรถยนต์
+และเรามี Function ที่ชื่อว่า updateCarCollection ซึ่งมีคุณสมบัติดังค่อไปนี้
+รับ Parameter carBrand ซึ่งเป็น String เก็บข้อมูลยี่ห้อรถ
+หากเพิ่มยี่ห้อรถยนต์เข้าไปในคอลเลคชั่นสำเร็จ โปรแกรมควรจะแสดงผลลัพธ์ออกมาเป็นข้อความว่า New car collection is: Toyota, Fiat, Honda, BMW, <ยี่ห้อรถใหม่>.
+หากผู้ใช้งานเพิ่มยี่ห้อรถที่มีอยู่แล้วในคอลเลคชั่นโปรแกรมควรจะแสดงผลลัพธ์ออกมาเป็นข้อความว่า <car-brand> already exists in position <position> of the car collection.
+<car-brand> คือยี่ห้อรถที่มีอยู่แล้วใน Collection
+<position> คือตำแหน่งใน Collection
+Example #7 :
+
+ให้เขียน Function ที่ชื่อว่า isPalindrome ซึ่งมีคุณสมบัติดังต่อไปนี้
+รับ Parameter string เป็น String ที่เป็นคำหรือ ประโยคอะไรก็ได้
+โดย Function นี้จะทำการตรวจสอบ string ที่ได้รับเข้ามาว่าเป็นคำที่สามารถอ่านจากหลังไปหน้าหรือหน้าไปหลังแล้วมีความหมายเหมือนกันหรือไม่ คำแบบนี้เรียกว่า Palindrome
+ในกรณีที่ string เป็น Palindrome ตัว Function นี้ จะ Return ผลลัพธ์เป็น true
+ในกรณีที่ string ไม่เป็น Palindrome ตัว Function นี้ จะ Return ผลลัพธ์เป็น false
+ให้เขียนโปรแกรมที่สามารถตรวจสอบ String ว่าเป็น Palindrome หรือไม่
+เมื่อโปรแกรมทำงานสำเร็จ ควรจะได้ผลลัพธ์แบบนี้
+
+Copy
+reviver //true 
+บวบ //true 
+deliver //false
+Exercise #8 (Challenge) :
+
+จาก Exercise #1 เจ้าของร้านอยากรู้ว่ายอดชำระทั้งหมดของแต่ละจังหวัดเป็นเท่าไหร่
+ให้เขียน Function สำหรับหายอดชำระทั้งหมดที่เกิดขึ้นในแต่ละ Location
+
+เมื่อโปรแกรมทำงานสำเร็จ ควรจะแสดงผลลัพธ์ทางหน้าจอแบบนี้
+{
+  Chonburi: 226687,
+  Suphanburi: 41012,
+  Trang: 24826,
+  Trat: 47202,
+  Lopburi: 29815,
+  Chiang Mai: 48911,
+  Lampang: 12545,
+  Phuket: 88674,
+  Saraburi: 23655,
+  Phrae: 15678,
+  Loei: 76757,
+  Chiang Rai: 11230,
+  Nakhon Pathom: 76705,
+  Bangkok: 370177,
+  Samut Prakan: 38590,
+  Rayong: 40543,
+  Yala: 11315,
+  Ranong: 42612,
+  Phayao: 48147,
+  Khonkaen: 23218,
+  Nan: 37463,
+  Nakhon Sawan: 74321
+}
+
