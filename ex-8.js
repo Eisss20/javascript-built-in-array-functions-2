@@ -378,7 +378,8 @@ function totalBill(bill){
     return bill.reduce((acc,cur) => {
        if(!acc[cur.location]){
         acc[cur.location] = 0
-       }else (acc[cur.location] += cur.total)
+       }
+       acc[cur.location] += cur.total
         return acc;
     },{})
 }
